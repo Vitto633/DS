@@ -8,6 +8,7 @@ import exercicio07
 import exercicio08
 import exercicio09
 import exercicio10
+import exercicio11
 
 isRunning = True
 
@@ -24,6 +25,7 @@ while isRunning:
     print("|    [8]exercicio08         |")
     print("|    [9]exercicio09         |")
     print("|    [10]exercicio10        |")
+    print("|    [11]exercicio11        |")
     print("|    [0]para sair           |")
     print("|                           |")
     print("+----LISTA DE EXERCICIOS----+\n")
@@ -60,6 +62,8 @@ while isRunning:
         case 10:
             exercicio10.exercicio10()
             input("Pressione enter para continuar.")
+        case 11:
+            exercicio11.exercicio11()
         case 0:
             isRunning = False
             print("Programa encerrado.")
