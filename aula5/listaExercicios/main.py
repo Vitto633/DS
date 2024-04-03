@@ -24,31 +24,37 @@ opcao = 0
 
 while isRunning:
     print("""
-    +----LISTA EXERCICIOS----+
-    |                        |
-    |   [1] = exercicio01    |  
-    |   [2] = exercicio02    |
-    |   [3] = exercicio03    |
-    |   [4] = exercicio04    |
-    |   [5] = exercicio05    |
-    |   [6] = exercicio06    |
-    |   [7] = exercicio07    |
-    |   [8] = exercicio08    |
-    |   [9] = exercicio09    |
-    |   [10] = exercicio10   |
-    |   [11] = exercicio11   | 
-    |   [12] = exercicio12   |
-    |   [13] = exercicio13   |
-    |   [14] = exercicio14   | 
-    |   [15] = exercicio15   |
-    |   [16] = exercicio16   |
-    |   [17] = exercicio17   | 
-    |   [0] = para sair      |
-    |                        |
-    +----LISTA EXERCICIOS----+
+    
+    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=LISTA EXERCICIOS-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    |                                                                           |
+    |   [1] = Função que retorna o primeiro valor do vetor.                     |  
+    |   [2] = Procedimento que exibe somente os numeros negativos no vetor.     |
+    |   [3] = Função que retorna a soma do vetor.                               |
+    |   [4] = Função que retorna a media do vetor.                              |
+    |   [5] = Exibe numeros impares do vetor.                                   |
+    |   [6] = Exibe primeiro e ultimo elemento do vetor.                        |
+    |   [7] = Exibe os elementos dos indices pares.                             |
+    |   [8] = Retorna true caso o valor do parametro existir no vetor.          |
+    |   [9] = Ordena vetor.                                                     |
+    |   [10] = Copia os valores do primeiro vetor no segundo.                   |
+    |   [11] = Copia os valores de primerio vetor no segundo so que invertidos. | 
+    |   [12] = Ordena o vetor em ordem crescente.                               |
+    |   [13] = Ordena o vetor em ordem decrescente.                             |
+    |   [14] = Escolha a ordem do vetor.                                        | 
+    |   [15] = Separa os pares dos impares.                                     |
+    |   [16] = Retorna os elementos do vetor que estão acima da média.          |
+    |   [17] = Retorna o maior elemento o vetor.                                | 
+    |   [0] = para sair                                                         |
+    |                                                                           |
+    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=LISTA EXERCICIOS-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     """)
 
-    opcao = int(input("Escolha o exercicio: "))
+    opcao = input("Escolha o exercicio: ")
+    while not opcao.isnumeric():
+        input("invalido, pressione enter para continuar.")
+        opcao = input("Escolha o exercicio: ")
+
+    opcao = int(opcao)
 
     match(opcao):
         case 1:
