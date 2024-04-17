@@ -41,15 +41,15 @@ def conta_inteiro():
 def get_opcoes():
   while True:
     input("Pressione Espaço ... ")
-    print("------------")
-    print("1 - Preenche lista")
-    print("2 - Exibe lista")
-    print("3 - Conta Elementos")
-    print("4 - Retorna Indice do Elemento do Parametro")
-    print("5 - Busca de Acordo com o Parametro")
-    print("6 - Conta a Quantidade de Inteiros")
+    print("=-=-=-=-=-=-=-=LISTA EXERCICIOS-=-=-=-=-=-=-=-=")
+    print("| 1 - Preenche lista")
+    print("| 2 - Exibe lista")
+    print("| 3 - Conta Elementos  ")
+    print("| 4 - Retorna Indice do Elemento do Parametro  |")
+    print("| 5 - Busca de Acordo com o Parametro          |")
+    print("| 6 - Conta a Quantidade de Inteiros           |")
     print("")
-    print("------------") 
+    print("=-=-=-=-=-=-=-=LISTA EXERCICIOS-=-=-=-=-=-=-=-=")
     opcao = int(input("Digite a opcao > "))
     match (opcao):
       case 1: 

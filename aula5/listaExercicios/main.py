@@ -25,7 +25,7 @@ opcao = 0
 while isRunning:
     print("""
     
-    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=LISTA EXERCICIOS-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=LISTA EXERCICIOS-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=       
     |                                                                           |
     |   [1] = Função que retorna o primeiro valor do vetor.                     |  
     |   [2] = Procedimento que exibe somente os numeros negativos no vetor.     |
