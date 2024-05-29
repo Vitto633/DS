@@ -1,0 +1,208 @@
+# trabalhando com indices negativos
+
+	 0    1   2   3   4   5   6   7   8   <== indices positivos
+lista = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+
+	 -9  -8  -7  -6  -5  -4  -3  -2  -1  <==indices negativos
+ 
+print(lista)
+print(lista[0]) - 10
+print(lista[-9]) - 10
+
+print(lista[-5]) - 50
+print(lista[-1]) - 90
+
+e utilizadeo quando você nao tem certeza do tamanho da lista -1 sempre sera o último
+
+#variações
+
+nova_lista = lista [2: 7] - peghar do indice 2 ate o indice 7 (sempre diminuindo 1 como o range sempre e necessario adicionar 1 numero a mais do que você quer pegar)
+
+print(nova_lista)
+print(lista[-6: -3]
+
+[inicio: fim - 1: passo]
+print(lista[-6: -3: 1]
+[40, 50, 60]
+
+print(lista[-8: -1: 2] - pula de 2 em dois
+[20, 40, 60, 80]
+
+print(lista[8: -0: -2] - faz do ultimo positivo ate o primeiro do posiivo pulando de dois em dois
+[90, 70, 50, 30]
+
+print(lista[:: 1] - daz toda a lista desde o começo pulando de um em um
+[10, 20, 30, 40, 50, 60, 70, 80, 90]
+
+
+
+
+#TUPLA: é uma lista que não pode ser modificada pelo programa ou pelo ususario
+
+lista = []
+tupla = () # ou tuple()
+# e utilizada quando uma lista nao sera modificada como se ela fosse uma constante como geolocalização(cordenadas)
+
+tupla = (5, 29, 'aniversario', 'edson', True)
+print(tupla)
+print(tupla[0: 3]) - quando você quer uma parte especifica da tupla e não a tupla inteira (ex: tupla[3])
+
+
+
+
+tipos dedados
+int()
+float()
+boolean()
+
+objeto - tipo de vetor
+str()
+
+	 01234567890123456789012345678901234567890123
+frase = "Dia 29, acontecerá algo especial no planeta!"
+
+print(frase)
+print (frase [3: 30]) - exibe um pedaço da lista
+print(frase [: : -2]) - exibe a frase ao contrario de tras para frente pulando de 2 em 2 
+#todos os exemplos de fatiamento funcionam com string
+
+for i in range (len(frase)):
+	print(frase[i], end = " " ) - exibe a fase inteira dando epaçada entre os numeros
+[Dia 29, acontecerá algo especial no planeta!]
+
+
+for i in range (0,len(frase, 2)):
+	print(frase[i], end = "" ) - exibe pulando de 2  em 2 caracteres
+[D a 2 , a o t c r   l o e p c a   o p a e a ]
+
+
+for i in range(10, len(frase) -5, 1):
+    print(frase[i], end = "") - exibe do carcxter 10 ate o carcter - 5
+[ontecerá algo especial no pla]
+
+
+
+for carac in frase:
+    print(carac, end="") - colocando as letras na variuavel carct e pedindo para ela exibir ate o fim da frase
+
+
+
+
+	 01234567890123456789012345678901234567890123
+frase = "Dia 29, acontecerá algo especial no planeta!"
+
+Metodo find => procura uma substring, se encontar retorna o indice
+
+print(frase.find("algo")) - 19
+
+print(frase.find(",")) - 6
+
+print(frase.find("a")) - 2
+
+print(frase.find("a, 3")) - começa a procurar a pratir do caracter 3 (pulando ate o indice 3 - 8)
+
+print(frase.find("a, 9, 25")) - procura do indice 9 ate o indice 25 - 19
+
+print(frase.find("z")) - -1 - não existe
+
+if frase.find("a") == -1:
+    print("nao existe")
+else:
+    print("existe")
+
+
+
+#Metodo join => transforma uma lista d estring em apenas uma string
+
+		0	1	  2
+lista_str = ["edson", "de" , "Oliveira"] - nao tem nada aver com string
+print(lista_str) - exibe a lista
+
+print(lista_str, len(lista_str)) - exibe a lista contando os indices
+['Edson', 'de', 'Oliveira'] 3
+
+print(" ". join(lista_str)) - concatenar(juntar sem somar) com um espaço entre eles
+
+print(" ".join(lista_str), len(" ".join(lista_str))) - concatenar a lista e conta os caracteres
+Edson de Oliveira 17
+
+
+
+#metodo split() => contrario do join
+
+nome = "Edson de oliveira"
+print(nome)
+Edson de Oliveira
+
+print(nome.split())
+["Edson", "de", "Oliveira"] _ transformar uma frase um vertor de strings
+
+print(nome.split("e"))
+["Edson", "d", "Oliv", "ira"] _ tira todos os caracteres e miusculos
+
+print(nome.split(de))
+['Edson ', ' Oliveira'] - deixa um espaço entre o final de Edson e o começo de Oliveira
+
+print(nome.split("z"))
+['Edson de Oliveira'] - quando um caracter naão e exibido ele mostra o split original
+
+
+
+
+#metodo replace() => substitui um trecho por outro
+	 1234567890123456789012345678901234567890123
+frase = "Dia 29, acontecerá algo especial no planeta!"
+nome = "Edson de oliveira
+
+nome_nem1 = nome.replace('e', 'E') - substitui o e minusculo por E maiusculo
+[Edson dE OlivEira]
+
+
+nome_new2 = nome.replace('de', 'DE') - substitui de minusculo por maiusculo
+print(nome_new2)
+[Edson DE Oliveira da silva nogueira]
+
+
+nome_new3 = nome.replace('e', 'caramba que coisa incrivel') - substitui todosa os e minusculos pela frase escolhida 
+print(nome_new3)
+[Edson dcaramba que coisa incrivel Olivcaramba que coisa incrivelira da silva nogucaramba que coisa incrivelira]
+
+
+# metodo strip() => Elimina os espaços do incio e do final da string
+texto = "	estou usando strip	"
+
+print(texto)
+[	estou usando strip	]
+
+print(texto.strip())
+[estou usando strip]
+
+
+
+# operador de indentidade
+num = 3
+if num in [1, 2, 3, 4, 5, 6, 7, 8, 9]:
+	print("Achou")
+else:
+	print("Não achou")
+
+
+nome = "MAria da Silva"
+if "a" in nome 
+	print("Achou")
+else:
+	print("Não achou")
+
+
+nome = "MAria da Silva"
+if "." not in nome 
+nome = nome + "."
+	print("Achou")
+else:
+	print("Não achou")
+
+
+
+texto = "gostei desse produto estou usando strip chegou atrasado gostei"
+
+
